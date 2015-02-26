@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var isbLocation=new google.maps.LatLng(33.65639,73.01654);
+
+function isbInitialize()
+{
+var mapProp = {
+  center: isbLocation,
+  zoom:15,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("isbMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: isbLocation,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 9 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(15);
+  map.setCenter(marker.getPosition());
+  });
+}
+google.maps.event.addDomListener(window, 'load', isbInitialize);
+</script>
+<!------------------------------------  Map for Karachi Location ---------------------------------------------->
+<script>
+var khiLocation=new google.maps.LatLng(24.85775,67.06177);
+
+function khiInitialize()
+{
+var mapProp = {
+  center: isbLocation,
+  zoom:15,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("khiMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: khiLocation,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 9 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(15);
+  map.setCenter(marker.getPosition());
+  });
+}
+google.maps.event.addDomListener(window, 'load', khiInitialize);
+</script>
+
+<!------------------------------------  Map for Lahore Location ---------------------------------------------->
+<script>
+var lhrLocation=new google.maps.LatLng(31.55461,74.35716);
+
+function lhrInitialize()
+{
+var mapProp = {
+  center: lhrLocation,
+  zoom:15,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("lhrMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: lhrLocation,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 9 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(15);
+  map.setCenter(marker.getPosition());
+  });
+}
+google.maps.event.addDomListener(window, 'load', lhrInitialize);
+</script>
+
+<!------------------------------------  Map for Peshawar Location ---------------------------------------------->
+<script>
+var pwrLocation=new google.maps.LatLng(33.98047,71.42718);
+
+function pwrInitialize()
+{
+var mapProp = {
+  center: pwrLocation,
+  zoom:15,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("pwrMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: pwrLocation,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 9 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(15);
+  map.setCenter(marker.getPosition());
+  });
+}
+google.maps.event.addDomListener(window, 'load', pwrInitialize);
+</script>
+
+<!------------------------------------  Map for Faislabad Location ---------------------------------------------->
+<script>
+var fsdLocation=new google.maps.LatLng(31.60145,73.03573);
+
+function fsdInitialize()
+{
+var mapProp = {
+  center: fsdLocation,
+  zoom:15,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("fsdMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: khiLocation,
+  title:'Click to zoom'
+  });
+
+marker.setMap(map);
+
+// Zoom to 15 when clicking on marker
+google.maps.event.addListener(marker,'click',function() {
+  map.setZoom(15);
+  map.setCenter(marker.getPosition());
+  });
+}
+google.maps.event.addDomListener(window, 'load', fsdInitialize);
+</script>
+
+
+<link rel="shortcut icon" href="C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU.ico" />
+</head>
+<body>
+<!------------------------------------  Main Page ---------------------------------------------->
+<div data-role="page" id="MainPage">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h1>National University Of Computer and Emerging Sciences (NU FAST)</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<ul data-role ="listview" data-theme="b" data-content-theme="b">
+	<li> <a href="#CampusesPage" data-transition="flip"> Campuses</a> </li>
+	<li><a href="#AdmissionPage" data-transition="flip"> Admissions </a></li>
+	<li> <a href="#DepartmentsPage" data-transition="flip"> Departments</a></li>
+	
+	</ul>
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div> 
+<!------------------------------------------------ Campuses Page ------------------------------------------------------->
+		
+<div data-role="page" id="CampusesPage">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<ul data-role ="listview" data-theme="b" data-content-theme="b">
+	<li> <a href="#Islamabad-Map-page" data-transition="flip">Islamabad</a></li>
+	<li> <a href="#Lahore-Map-page" data-transition="flip">Lahore</a> </li>
+	<li><a href="#Karachi-Map-page" data-transition="flip"> Karachi</a> </li>
+	<li> <a href="#Peshawar-Map-page" data-transition="flip">Peshawar</a> </li>
+	<li><a href="#Faislabad-Map-page" data-transition="flip"> Faislabad </a></li>
+	</ul>
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+<!------------------------------------------------ Admissions Page ------------------------------------------------------->
+		
+<div data-role="page" id="AdmissionPage">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+
+  <div data-role="main" class="ui-content" data-theme="b" data-content-theme="b">
+  <h2>Tentative Admission Plan</h2>
+  <br>
+<table data-role="table" class="ui-responsive" data-theme="b" data-content-theme="b">
+      <thead>
+        <tr>
+          
+		  <th> Plan</th>
+          <th>BBA & BS </th>
+          <th>MBA & MS</th>
+          <th>PHD</th> 
+		  </tr>
+		  
+      </thead>
+	  <tbody>
+        <tr>
+          <td>  Application Submission</td>
+          <td>	Jun 9 - 28 (Mon-Sat)</td>
+          <td> Jun 9 - 28 (Mon-Sat)	</td>
+          <td> Jan 31, 2015 (Sat)</td>
+        </tr>
+		        <tr>
+          <td>  Admission Tests	</td>
+          <td>		Jul 1 - 7 (Tue-Mon)</td>
+          <td> Jul 1 - 7 (Tue-Mon)</td>
+          <td> - </td>
+        </tr>
+				
+					        <tr>
+          <td>  Declaration of selected Candidates	</td>
+          <td>			Jul 19 (Sat)</td>
+          <td> Jul 12 (Sat)	</td>
+          <td> - </td>
+        </tr>
+		
+				        <tr>
+          <td>   Interviews	</td>
+          <td>	- </td>
+          <td> Jul 15 - 17 (Tue-Thu)	</td>
+          <td> - </td>
+        </tr>
+		<tr>
+          <td>   Admission Formalities	</td>
+          <td>		Jul 21 - 24 (Mon-Thu) </td>
+          <td> Jul 28 - 30 (Mon-Wed) </td>
+          <td> - </td>
+        </tr>
+		</tbody>
+		</table>
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+
+<!------------------------------------------------ Islamabad Map ------------------------------------------------------->
+
+<div data-role="page" id="IslamabadCampus" data-url="Islamabad-Map-page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+  <div>
+<h3>Islamabad Campus Map</h3>
+</div>
+ 
+	<div role="main" class="ui-content" id="isbMap" style="width:500px;height:380px;"></div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+<!------------------------------------------------ Karachi Map ------------------------------------------------------->
+
+<div data-role="page" id="KarachiCampus" data-url="Karachi-Map-page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+  <div>
+<h3>Karachi Campus Map</h3>
+</div>
+ 
+	<div role="main" class="ui-content" id="khiMap" style="width:500px;height:380px;"></div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+<!------------------------------------------------ Lahore Map ------------------------------------------------------->
+
+<div data-role="page" id="LahoreCampus" data-url="Lahore-Map-page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+  <div>
+<h3>Lahore Campus Map</h3>
+</div>
+ 
+	<div role="main" class="ui-content" id="lhrMap" style="width:300px;height:380px;"></div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+<!------------------------------------------------ Peshawar Map ------------------------------------------------------->
+
+<div data-role="page" id="PeshawarCampus" data-url="Peshawar-Map-page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+  <div>
+<h3>Peshawar Campus Map</h3>
+</div>
+ 
+	<div role="main" class="ui-content" id="pwrMap" style="width:500px;height:380px;"></div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+<!------------------------------------------------ Faislabad Map ------------------------------------------------------->
+
+<div data-role="page" id="FaislabadCampus" data-url="Faislabad-Map-page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+  <div>
+<h3>Faislabad Campus Map</h3>
+</div>
+ 
+	<div role="main" class="ui-content" id="fsdMap" style="width:500px;height:380px;"></div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+<!------------------------------------------------ Departments Page ------------------------------------------------------->
+
+<div data-role="page" id="DepartmentsPage">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" allign="center" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<ul data-role ="listview" data-theme="b" data-content-theme="b">
+	<li> <a href="#CS-Page" data-transition="flip">Computer Sciences </a></li>
+	<li> <a href="#EE-Page"data-transition="flip">Electrical Engineering</a> </li>
+	<li><a href="#Management-Page"data-transition="flip"> Management Sciences</a> </li>
+	</ul>
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+<!------------------------------------------ CS Page ------------------------------------------------------->
+
+<div data-role="page" id="CS-Page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<div data-role="collapsible" data-theme="b" data-content-theme="b">
+		<h2> Computer Sciences </h2>
+			<ul data-role="listview" data-filter="true">
+				<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Bachelor programs</h3>
+							<div data-role="collapsible" data-theme="b" data-content-theme="b">
+								<h3>Computer Sciences</h3>
+									<ul data-role="listview" data-filter="false">
+										<li>
+											<p> BSCS Details</p>
+										</li>
+									</ul>
+							</div>
+					</div>
+	
+				</li>
+	<!------------------------------------------- For Masters Details ------------------------------------------------------->
+	<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Master programs</h3>
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+							
+										<li>
+												Computer Sciences
+										</li>
+										<li>
+											 Computer Network and Security
+										</li>
+										<li>
+											 Software Engineering
+										</li>
+										<li>
+											 Software Project Management
+										</li>
+									</ul>
+
+							</div>
+					</div>
+	
+				</li>
+<!------------------------------------------- For PHD Details ------------------------------------------------------->
+	<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>PHD programs</h3>
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+									<li>
+										Computer Sciences	
+										</li>
+							</ul>
+
+							</div>
+					</div>
+	
+				</li>				
+	</ul>
+  </div>
+
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+<!------------------------------------------------ EE PAGE ------------------------------------------------------->
+
+
+<div data-role="page" id="EE-Page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<div data-role="collapsible" data-theme="b" data-content-theme="b">
+		<h2> Engineering Disciplines </h2>
+			<ul data-role="listview" data-filter="true">
+				<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Bachelor programs</h3>
+							
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+										<li>
+											Electrical Engineering
+										</li>
+										<li>
+											Civil Engineering
+										</li>
+									
+									</ul>
+							
+					</div>
+	
+				</li>
+	<!------------------------------------------- For Masters Details ------------------------------------------------------->
+	<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Master programs</h3>
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+									<li>
+											Electrical Engineering
+										</li>
+										<li>
+											Civil Engineering
+										</li>
+							</ul>
+
+							</div>
+					</div>
+	
+				</li>	
+				<!------------------------------------------- For PHD Details ------------------------------------------------------->
+	<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>PHD programs</h3>
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+									<li>
+										Electrical Engineering
+										</li>
+							</ul>
+
+							</div>
+					</div>
+	
+				</li>
+	</ul>
+  </div>
+
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+
+<!------------------------------------------------ Management PAGE ------------------------------------------------------->
+
+
+<div data-role="page" id="Management-Page">
+  <div data-role="header" data-theme="b" data-content-theme="b">
+   <img src = "C:\Users\Mubashir Sami\Desktop\MC Assignment\images\NU_Logo.png" align="centre" width="100" height ="100"> 
+   <h3>National University Of Computer and Emerging Sciences (NU FAST)</h3>
+  </div>
+
+  <div data-role="main" class="ui-content">
+	<div data-role="collapsible" data-theme="b" data-content-theme="b">
+		<h2> Managemenet Disciplines </h2>
+			<ul data-role="listview" data-filter="true">
+				<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Bachelor programs</h3>
+							
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+										<li>
+											Business Administration
+										</li>
+										<li>
+											Accounting and Finance
+										</li>
+									
+									</ul>
+							
+					</div>
+	
+				</li>
+	<!------------------------------------------- For Masters Details ------------------------------------------------------->
+	<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Master programs</h3>
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+									<li>		
+												Business Administration (1½- year)					
+									</li>
+										<li>
+											Business Administration (2- year)
+										</li>
+							</ul>
+
+							</div>
+					</div>
+	
+				</li>	
+				
+				<!------------------------------------------- For PHD Details ------------------------------------------------------->
+	<li>
+	
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>PHD programs</h3>
+							<ul data-role="listview" data-filter="false" data-theme="b" data-content-theme="b">
+									<li>		
+									Management Sciences
+										</li>
+							</ul>
+
+							</div>
+					</div>
+	
+				</li>	
+	</ul>
+  </div>
+
+  </div>
+
+  <div data-role="footer" data-theme="b" data-content-theme="b">
+    <h3>Copyright © 2000 - 2015 , NUCES. All Rights Reserved.</h3>
+  </div>
+</div>
+</body>
+</html>
